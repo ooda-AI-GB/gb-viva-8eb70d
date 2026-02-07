@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <h2>Create a New Poll</h2>
+    <form action="{{ url_for('create_poll') }}" method="post" class="create-form">
+        <div class="form-group">
+            <label for="question">Poll Question</label>
+            <input type="text" id="question" name="question" required>
+        </div>
+        <div class="form-group">
+            <label>Options (2-5 options)</label>
+            <input type="text" name="options" placeholder="Option 1" required>
+            <input type="text" name="options" placeholder="Option 2" required>
+            <input type="text" name="options" placeholder="Option 3">
+            <input type="text" name="options" placeholder="Option 4">
+            <input type="text" name="options" placeholder="Option 5">
+        </div>
+        <button type="submit">Create Poll</button>
+    </form>
+{% endblock %}

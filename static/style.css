@@ -1,0 +1,233 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    padding: 30px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+header h1 a {
+    text-decoration: none;
+    color: #8a2be2;
+}
+
+nav a {
+    text-decoration: none;
+    color: #555;
+    margin-left: 20px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+nav a:hover {
+    color: #8a2be2;
+}
+
+h2 {
+    color: #8a2be2;
+    margin-bottom: 20px;
+}
+
+.poll-list {
+    list-style: none;
+    padding: 0;
+}
+
+.poll-list li {
+    margin-bottom: 15px;
+}
+
+.poll-list a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.poll-list a:hover {
+    background-color: #f0e6ff;
+    transform: translateY(-2px);
+}
+
+.poll-question {
+    font-weight: 500;
+}
+
+.poll-votes {
+    font-size: 14px;
+    color: #777;
+    background-color: #e0e0e0;
+    padding: 5px 10px;
+    border-radius: 12px;
+}
+
+.vote-options {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.vote-options li {
+    margin-bottom: 10px;
+}
+
+.vote-options label {
+    display: block;
+    padding: 12px 18px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.vote-options label:hover {
+    background-color: #f0e6ff;
+}
+
+.vote-options input[type="radio"] {
+    margin-right: 10px;
+}
+
+button, .button {
+    display: inline-block;
+    background-color: #8a2be2;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.2s ease;
+}
+
+button:hover, .button:hover {
+    background-color: #7324bf;
+}
+
+.total-votes {
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.results {
+    margin-bottom: 20px;
+}
+
+.result-option {
+    margin-bottom: 15px;
+}
+
+.result-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.option-text {
+    font-weight: 500;
+}
+
+.option-votes {
+    font-size: 14px;
+    color: #777;
+}
+
+.progress-bar-container {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 20px;
+    background-color: #8a2be2;
+    border-radius: 8px;
+}
+
+.create-form, .login-form {
+    max-width: 500px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.form-group input[type="text"]::placeholder {
+    color: #aaa;
+}
+
+
+.flashes {
+    margin-bottom: 20px;
+}
+
+.flash {
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.flash-success {
+    background-color: #28a745;
+}
+
+.flash-danger {
+    background-color: #dc3545;
+}
+
+.flash-warning {
+    background-color: #ffc107;
+    color: #333;
+}

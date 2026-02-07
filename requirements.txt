@@ -1,0 +1,8 @@
+flask
+flask_sqlalchemy
+sqlalchemy
+gunicorn
+bcrypt
+jinja2
+itsdangerous
+python-multipart

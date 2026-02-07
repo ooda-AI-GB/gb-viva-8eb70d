@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <h2>{{ poll.question }}</h2>
+    <form action="{{ url_for('vote', poll_id=poll.id) }}" method="post">
+        <ul class="vote-options">
+            {% for option in poll.options %}
+                <li>
+                    <label>
+                        <input type="radio" name="option" value="{{ option.id }}" required>
+                        {{ option.text }}
+                    </label>
+                </li>
+            {% endfor %}
+        </ul>
+        <button type="submit">Vote</button>
+    </form>
+{% endblock %}

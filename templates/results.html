@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <h2>{{ poll.question }}</h2>
+    <p class="total-votes">Total Votes: {{ total_votes }}</p>
+    <div class="results">
+        {% for option in poll.options %}
+            <div class="result-option">
+                <div class="result-info">
+                    <span class="option-text">{{ option.text }}</span>
+                    <span class="option-votes">{{ option.vote_count() }} ({{ '%.1f'|format((option.vote_count() / total_votes * 100) if total_votes > 0 else 0) }}%)</span>
+                </div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" style="width: {{ (option.vote_count() / total_votes * 100) if total_votes > 0 else 0 }}%;"></div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <a href="{{ url_for('vote', poll_id=poll.id) }}" class="button">Vote in this poll</a>
+{% endblock %}

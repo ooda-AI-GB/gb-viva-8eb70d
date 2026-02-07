@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <h2>Active Polls</h2>
+    <ul class="poll-list">
+        {% for poll in polls %}
+            <li>
+                <a href="{{ url_for('poll_results', poll_id=poll.id) }}">
+                    <span class="poll-question">{{ poll.question }}</span>
+                    <span class="poll-votes">{{ poll.total_votes() }} votes</span>
+                </a>
+            </li>
+        {% else %}
+            <li>No polls available.</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
